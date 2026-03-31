@@ -1,0 +1,738 @@
+openapi: 3.1.0
+info:
+  description: IBSWebCO API Sprint per l'automazione delle richieste di Certificati
+    di origine e Visti alle Camera di commercio italiane (servizio Commercio Estero)
+  title: API Sprint - Documentazione
+  version: 2.0.0
+servers:
+- url: https://api.sprintco.it/v2
+security:
+- http: []
+paths:
+  /test:
+    get:
+      operationId: v2
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/v2_200_response"
+          description: ""
+      x-accepts:
+      - application/json
+  /modelli:
+    get:
+      operationId: v2modelli.index
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display a listing of the resource
+      tags:
+      - Modello
+      x-accepts:
+      - application/json
+    post:
+      operationId: v2modelli.store
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2modelli_store_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Store a newly created resource in storage
+      tags:
+      - Modello
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /modelli/{modello}:
+    delete:
+      operationId: v2modelli.destroy
+      parameters:
+      - description: The modello idm1
+        explode: false
+        in: path
+        name: modello
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "204":
+          description: No content
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Remove the specified resource from storage
+      tags:
+      - Modello
+      x-accepts:
+      - application/json
+    get:
+      operationId: v2modelli.show
+      parameters:
+      - description: The modello idm1
+        explode: false
+        in: path
+        name: modello
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display the specified resource
+      tags:
+      - Modello
+      x-accepts:
+      - application/json
+    put:
+      operationId: v2modelli.update
+      parameters:
+      - description: The modello idm1
+        explode: false
+        in: path
+        name: modello
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2modelli_update_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Update the specified resource in storage
+      tags:
+      - Modello
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /richieste:
+    get:
+      operationId: v2richieste.index
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display a listing of the resource
+      tags:
+      - Richiesta
+      x-accepts:
+      - application/json
+    post:
+      operationId: v2richieste.store
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2richieste_store_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Store a newly created resource in storage
+      tags:
+      - Richiesta
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /richieste/{richiesta}:
+    delete:
+      operationId: v2richieste.destroy
+      parameters:
+      - description: The richiesta r1 codric
+        explode: false
+        in: path
+        name: richiesta
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Remove the specified resource from storage
+      tags:
+      - Richiesta
+      x-accepts:
+      - application/json
+    get:
+      operationId: v2richieste.show
+      parameters:
+      - description: The richiesta r1 codric
+        explode: false
+        in: path
+        name: richiesta
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display the specified resource
+      tags:
+      - Richiesta
+      x-accepts:
+      - application/json
+    put:
+      operationId: v2richieste.update
+      parameters:
+      - description: The richiesta r1 codric
+        explode: false
+        in: path
+        name: richiesta
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2richieste_update_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Update the specified resource in storage
+      tags:
+      - Richiesta
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /visti:
+    get:
+      operationId: v2visti.index
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display a listing of the resource
+      tags:
+      - Visto
+      x-accepts:
+      - application/json
+    post:
+      operationId: v2visti.store
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2visti_store_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Store a newly created resource in storage
+      tags:
+      - Visto
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /visti/{visto}:
+    delete:
+      operationId: v2visti.destroy
+      parameters:
+      - description: The visto cod
+        explode: false
+        in: path
+        name: visto
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Remove the specified resource from storage
+      tags:
+      - Visto
+      x-accepts:
+      - application/json
+    get:
+      operationId: v2visti.show
+      parameters:
+      - description: The visto cod
+        explode: false
+        in: path
+        name: visto
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Display the specified resource
+      tags:
+      - Visto
+      x-accepts:
+      - application/json
+    put:
+      operationId: v2visti.update
+      parameters:
+      - description: The visto cod
+        explode: false
+        in: path
+        name: visto
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v2visti_update_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: ""
+        "403":
+          $ref: "#/components/responses/AuthorizationException"
+        "422":
+          $ref: "#/components/responses/ValidationException"
+        "404":
+          $ref: "#/components/responses/ModelNotFoundException"
+        "401":
+          $ref: "#/components/responses/AuthenticationException"
+      summary: Update the specified resource in storage
+      tags:
+      - Visto
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+components:
+  responses:
+    AuthenticationException:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/inline_object"
+      description: Unauthenticated
+    AuthorizationException:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/inline_object"
+      description: Authorization error
+    ValidationException:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/inline_object_1"
+      description: Validation error
+    ModelNotFoundException:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/inline_object"
+      description: Not found
+  schemas:
+    inline_object_1:
+      example:
+        message: message
+        errors:
+          key:
+          - errors
+          - errors
+      properties:
+        message:
+          description: Errors overview.
+          type: string
+        errors:
+          additionalProperties:
+            items:
+              type: string
+          description: A detailed description of each field that failed validation.
+      required:
+      - errors
+      - message
+    v2modelli_store_request:
+      properties:
+        descrizione:
+          maxLength: 60
+          type: string
+      required:
+      - descrizione
+    v2richieste_store_request:
+      properties:
+        descrizione:
+          maxLength: 255
+          type: string
+        numero_copie:
+          default: 0
+          type: string
+        modello_id:
+          type: string
+        speditore:
+          type: string
+        destinatario:
+          type: string
+        paese_origine:
+          type: string
+        trasporto:
+          type: string
+        osservazioni:
+          type: string
+        merci:
+          type: string
+        quantita:
+          type: string
+        paese_dest:
+          default: ""
+          type: string
+        valore_merce:
+          default: ""
+          type: string
+        numero_aut:
+          default: 0
+          type: string
+        paese_comunitario:
+          default: ""
+          type: string
+        produzione:
+          default: ""
+          type: string
+        azienda_produttrice:
+          type: string
+        modifiche:
+          default: ""
+          type: string
+        azienda_modifiche:
+          type: string
+        paese_extraue:
+          default: ""
+          type: string
+        documentazione_allegata:
+          type: string
+        giacenza_merci:
+          default: ""
+          type: string
+        annotazioni_mittente:
+          type: string
+        annotazioni_interne:
+          type: string
+        proforma:
+          default: "N"
+          type: string
+        urgente:
+          default: "N"
+          type: string
+        email_contatto:
+          default: ""
+          type: string
+        cciaa:
+          $ref: "#/components/schemas/v2richieste_store_request_cciaa"
+      required:
+      - descrizione
+    v2_200_response:
+      example:
+        message: API Sprint v2
+      properties:
+        message:
+          enum:
+          - API Sprint v2
+          type: string
+      required:
+      - message
+    inline_object:
+      example:
+        message: message
+      properties:
+        message:
+          description: Error overview.
+          type: string
+      required:
+      - message
+    v2richieste_store_request_cciaa:
+      properties:
+        sportello:
+          type: string
+        sede:
+          type: string
+    v2modelli_update_request:
+      properties:
+        descrizione:
+          maxLength: 60
+          type: string
+        speditore:
+          maxLength: 240
+          type: string
+        destinatario:
+          maxLength: 800
+          type: string
+        trasporto:
+          description: "'paese_origine' => 'max:256',"
+          maxLength: 200
+          type: string
+        osservazioni:
+          maxLength: 500
+          type: string
+        paese_destinazione:
+          description: |-
+            'merci' => 'max:3500',
+            'quantita' => 'max:3500',
+          maxLength: 256
+          type: string
+        azienda_produttrice:
+          maxLength: 850
+          type: string
+        azienda_modifiche:
+          maxLength: 850
+          type: string
+        documentazione_allegata:
+          maxLength: 850
+          type: string
+        giacenza_merci:
+          maxLength: 200
+          type: string
+        ncopie:
+          default: 0
+          type: string
+        nvisti:
+          default: 0
+          type: string
+        nleg:
+          default: 0
+          type: string
+        fatt_firmata:
+          default: S
+          type: string
+        notecciaa:
+          default: ""
+          type: string
+      required:
+      - descrizione
+    v2richieste_update_request:
+      properties:
+        descrizione:
+          maxLength: 255
+          type: string
+        speditore:
+          maxLength: 240
+          type: string
+        destinatario:
+          maxLength: 258
+          type: string
+        paese_origine:
+          maxLength: 256
+          type: string
+        informazioni:
+          maxLength: 129
+          type: string
+        osservazioni:
+          maxLength: 300
+          type: string
+        paese_dest:
+          maxLength: 256
+          type: string
+        numero_copie:
+          default: 0
+          type: string
+        trasporto:
+          type: string
+        merci:
+          type: string
+        quantita:
+          type: string
+        valore_merce:
+          type: string
+        numero_aut:
+          type: string
+        paese_comunitario:
+          type: string
+        produzione:
+          type: string
+        azienda_produttrice:
+          type: string
+        modifiche:
+          type: string
+        azienda_modifiche:
+          type: string
+        paese_extraue:
+          type: string
+        documentazione_allegata:
+          type: string
+        giacenza_merci:
+          type: string
+        annotazioni_mittente:
+          type: string
+        annotazioni_interne:
+          type: string
+        proforma:
+          type: string
+        urgente:
+          type: string
+        email_contatto:
+          type: string
+        cciaa:
+          $ref: "#/components/schemas/v2richieste_store_request_cciaa"
+      required:
+      - descrizione
+      - destinatario
+      - paese_origine
+      - speditore
+    v2visti_store_request:
+      properties:
+        descrizione:
+          maxLength: 100
+          type: string
+        annotazioni_mittente:
+          default: ""
+          type: string
+        stampa_azienda:
+          default: s
+          type: string
+      required:
+      - descrizione
+    v2visti_update_request:
+      properties:
+        descrizione:
+          maxLength: 100
+          type: string
+        annotazioni_mittente:
+          type: string
+        stampa_azienda:
+          type: string
+      required:
+      - descrizione
+  securitySchemes:
+    http:
+      scheme: bearer
+      type: http
+
