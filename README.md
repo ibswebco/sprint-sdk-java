@@ -2,7 +2,7 @@
 
 API Sprint - Documentazione
 - API version: 2.0.0
-  - Build date: 2026-04-02T09:21:23.762486700+02:00[Europe/Rome]
+  - Build date: 2026-04-02T09:24:48.820213600+02:00[Europe/Rome]
   - Generator version: 7.21.0
 
 IBSWebCO API Sprint per l'automazione delle richieste di Certificati di origine e Visti alle Camera di commercio italiane (servizio Commercio Estero)
@@ -81,10 +81,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
 import org.openapitools.client.model.*;
 import it.ibswebco.sprint.DefaultApi;
 

@@ -20,11 +20,11 @@ Remove the specified resource from storage
 ### Example
 ```java
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
-import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
+import it.ibswebco.sprint.models.*;
 import it.ibswebco.sprint.VistoApi;
 
 public class Example {
@@ -87,11 +87,11 @@ Display a listing of the resource
 ### Example
 ```java
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
-import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
+import it.ibswebco.sprint.models.*;
 import it.ibswebco.sprint.VistoApi;
 
 public class Example {
@@ -149,11 +149,11 @@ Display the specified resource
 ### Example
 ```java
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
-import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
+import it.ibswebco.sprint.models.*;
 import it.ibswebco.sprint.VistoApi;
 
 public class Example {
@@ -217,11 +217,11 @@ Store a newly created resource in storage
 ### Example
 ```java
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
-import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
+import it.ibswebco.sprint.models.*;
 import it.ibswebco.sprint.VistoApi;
 
 public class Example {
@@ -285,11 +285,11 @@ Update the specified resource in storage
 ### Example
 ```java
 // Import classes:
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.auth.*;
-import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.auth.*;
+import it.ibswebco.sprint.models.*;
 import it.ibswebco.sprint.VistoApi;
 
 public class Example {

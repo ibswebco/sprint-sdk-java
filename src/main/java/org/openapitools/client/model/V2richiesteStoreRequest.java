@@ -44,12 +44,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import it.ibswebco.spint.JSON;
+import it.ibswebco.sprint.JSON;
 
 /**
  * V2richiesteStoreRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-04-02T09:21:23.762486700+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-04-02T09:24:48.820213600+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
 public class V2richiesteStoreRequest {
   public static final String SERIALIZED_NAME_DESCRIZIONE = "descrizione";
   @SerializedName(SERIALIZED_NAME_DESCRIZIONE)

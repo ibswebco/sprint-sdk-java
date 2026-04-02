@@ -13,14 +13,14 @@
 
 package it.ibswebco.sprint;
 
-import it.ibswebco.spint.ApiCallback;
-import it.ibswebco.spint.ApiClient;
-import it.ibswebco.spint.ApiException;
-import it.ibswebco.spint.ApiResponse;
-import it.ibswebco.spint.Configuration;
-import it.ibswebco.spint.Pair;
-import it.ibswebco.spint.ProgressRequestBody;
-import it.ibswebco.spint.ProgressResponseBody;
+import it.ibswebco.sprint.ApiCallback;
+import it.ibswebco.sprint.ApiClient;
+import it.ibswebco.sprint.ApiException;
+import it.ibswebco.sprint.ApiResponse;
+import it.ibswebco.sprint.Configuration;
+import it.ibswebco.sprint.Pair;
+import it.ibswebco.sprint.ProgressRequestBody;
+import it.ibswebco.sprint.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
