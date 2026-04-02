@@ -11,7 +11,7 @@
  */
 
 
-package org.openapitools.client;
+package it.ibswebco.spint;
 
 import java.io.IOException;
 

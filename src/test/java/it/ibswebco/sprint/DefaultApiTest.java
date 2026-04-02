@@ -11,9 +11,9 @@
  */
 
 
-package org.openapitools.client.api;
+package it.ibswebco.sprint;
 
-import org.openapitools.client.ApiException;
+import it.ibswebco.spint.ApiException;
 import org.openapitools.client.model.V2200Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

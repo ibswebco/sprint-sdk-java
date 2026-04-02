@@ -11,16 +11,16 @@
  */
 
 
-package org.openapitools.client.api;
+package it.ibswebco.sprint;
 
-import org.openapitools.client.ApiCallback;
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.ApiResponse;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.Pair;
-import org.openapitools.client.ProgressRequestBody;
-import org.openapitools.client.ProgressResponseBody;
+import it.ibswebco.spint.ApiCallback;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.ApiResponse;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.Pair;
+import it.ibswebco.spint.ProgressRequestBody;
+import it.ibswebco.spint.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 

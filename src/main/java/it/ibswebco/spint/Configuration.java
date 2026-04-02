@@ -11,13 +11,13 @@
  */
 
 
-package org.openapitools.client;
+package it.ibswebco.spint;
 
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-31T09:52:59.357933300+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-04-02T09:21:23.762486700+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
 public class Configuration {
   public static final String VERSION = "2.0.0";
 

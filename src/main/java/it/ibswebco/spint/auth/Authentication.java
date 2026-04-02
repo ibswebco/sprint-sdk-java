@@ -11,16 +11,16 @@
  */
 
 
-package org.openapitools.client.auth;
+package it.ibswebco.spint.auth;
 
-import org.openapitools.client.Pair;
-import org.openapitools.client.ApiException;
+import it.ibswebco.spint.Pair;
+import it.ibswebco.spint.ApiException;
 
 import java.net.URI;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-31T09:52:59.357933300+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-04-02T09:21:23.762486700+02:00[Europe/Rome]", comments = "Generator version: 7.21.0")
 public interface Authentication {
     /**
      * Apply authentication settings to header and query params.

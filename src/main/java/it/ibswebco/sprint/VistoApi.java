@@ -11,16 +11,16 @@
  */
 
 
-package org.openapitools.client.api;
+package it.ibswebco.sprint;
 
-import org.openapitools.client.ApiCallback;
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.ApiResponse;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.Pair;
-import org.openapitools.client.ProgressRequestBody;
-import org.openapitools.client.ProgressResponseBody;
+import it.ibswebco.spint.ApiCallback;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.ApiResponse;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.Pair;
+import it.ibswebco.spint.ProgressRequestBody;
+import it.ibswebco.spint.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
@@ -29,8 +29,8 @@ import java.io.IOException;
 
 import org.openapitools.client.model.InlineObject;
 import org.openapitools.client.model.InlineObject1;
-import org.openapitools.client.model.V2richiesteStoreRequest;
-import org.openapitools.client.model.V2richiesteUpdateRequest;
+import org.openapitools.client.model.V2vistiStoreRequest;
+import org.openapitools.client.model.V2vistiUpdateRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -38,16 +38,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RichiestaApi {
+public class VistoApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public RichiestaApi() {
+    public VistoApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public RichiestaApi(ApiClient apiClient) {
+    public VistoApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
@@ -76,8 +76,8 @@ public class RichiestaApi {
     }
 
     /**
-     * Build call for v2richiesteDestroy
-     * @param richiesta The richiesta r1 codric (required)
+     * Build call for v2vistiDestroy
+     * @param visto The visto cod (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -91,7 +91,7 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteDestroyCall(@javax.annotation.Nonnull String richiesta, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v2vistiDestroyCall(@javax.annotation.Nonnull String visto, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -108,8 +108,8 @@ public class RichiestaApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/richieste/{richiesta}"
-            .replace("{" + "richiesta" + "}", localVarApiClient.escapeString(richiesta.toString()));
+        String localVarPath = "/visti/{visto}"
+            .replace("{" + "visto" + "}", localVarApiClient.escapeString(visto.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -137,21 +137,20 @@ public class RichiestaApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v2richiesteDestroyValidateBeforeCall(@javax.annotation.Nonnull String richiesta, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'richiesta' is set
-        if (richiesta == null) {
-            throw new ApiException("Missing the required parameter 'richiesta' when calling v2richiesteDestroy(Async)");
+    private okhttp3.Call v2vistiDestroyValidateBeforeCall(@javax.annotation.Nonnull String visto, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'visto' is set
+        if (visto == null) {
+            throw new ApiException("Missing the required parameter 'visto' when calling v2vistiDestroy(Async)");
         }
 
-        return v2richiesteDestroyCall(richiesta, _callback);
+        return v2vistiDestroyCall(visto, _callback);
 
     }
 
     /**
      * Remove the specified resource from storage
      * 
-     * @param richiesta The richiesta r1 codric (required)
-     * @return Object
+     * @param visto The visto cod (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -163,16 +162,15 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public Object v2richiesteDestroy(@javax.annotation.Nonnull String richiesta) throws ApiException {
-        ApiResponse<Object> localVarResp = v2richiesteDestroyWithHttpInfo(richiesta);
-        return localVarResp.getData();
+    public void v2vistiDestroy(@javax.annotation.Nonnull String visto) throws ApiException {
+        v2vistiDestroyWithHttpInfo(visto);
     }
 
     /**
      * Remove the specified resource from storage
      * 
-     * @param richiesta The richiesta r1 codric (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param visto The visto cod (required)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -184,16 +182,15 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> v2richiesteDestroyWithHttpInfo(@javax.annotation.Nonnull String richiesta) throws ApiException {
-        okhttp3.Call localVarCall = v2richiesteDestroyValidateBeforeCall(richiesta, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    public ApiResponse<Void> v2vistiDestroyWithHttpInfo(@javax.annotation.Nonnull String visto) throws ApiException {
+        okhttp3.Call localVarCall = v2vistiDestroyValidateBeforeCall(visto, null);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Remove the specified resource from storage (asynchronously)
      * 
-     * @param richiesta The richiesta r1 codric (required)
+     * @param visto The visto cod (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,15 +204,14 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteDestroyAsync(@javax.annotation.Nonnull String richiesta, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call v2vistiDestroyAsync(@javax.annotation.Nonnull String visto, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v2richiesteDestroyValidateBeforeCall(richiesta, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        okhttp3.Call localVarCall = v2vistiDestroyValidateBeforeCall(visto, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
-     * Build call for v2richiesteIndex
+     * Build call for v2vistiIndex
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -227,7 +223,7 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteIndexCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v2vistiIndexCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -244,7 +240,7 @@ public class RichiestaApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/richieste";
+        String localVarPath = "/visti";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -272,8 +268,8 @@ public class RichiestaApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v2richiesteIndexValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return v2richiesteIndexCall(_callback);
+    private okhttp3.Call v2vistiIndexValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return v2vistiIndexCall(_callback);
 
     }
 
@@ -290,8 +286,8 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public Object v2richiesteIndex() throws ApiException {
-        ApiResponse<Object> localVarResp = v2richiesteIndexWithHttpInfo();
+    public Object v2vistiIndex() throws ApiException {
+        ApiResponse<Object> localVarResp = v2vistiIndexWithHttpInfo();
         return localVarResp.getData();
     }
 
@@ -308,8 +304,8 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> v2richiesteIndexWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = v2richiesteIndexValidateBeforeCall(null);
+    public ApiResponse<Object> v2vistiIndexWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = v2vistiIndexValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -328,16 +324,16 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteIndexAsync(final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call v2vistiIndexAsync(final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v2richiesteIndexValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = v2vistiIndexValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for v2richiesteShow
-     * @param richiesta The richiesta r1 codric (required)
+     * Build call for v2vistiShow
+     * @param visto The visto cod (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -351,7 +347,7 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteShowCall(@javax.annotation.Nonnull String richiesta, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v2vistiShowCall(@javax.annotation.Nonnull String visto, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -368,8 +364,8 @@ public class RichiestaApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/richieste/{richiesta}"
-            .replace("{" + "richiesta" + "}", localVarApiClient.escapeString(richiesta.toString()));
+        String localVarPath = "/visti/{visto}"
+            .replace("{" + "visto" + "}", localVarApiClient.escapeString(visto.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -397,20 +393,20 @@ public class RichiestaApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v2richiesteShowValidateBeforeCall(@javax.annotation.Nonnull String richiesta, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'richiesta' is set
-        if (richiesta == null) {
-            throw new ApiException("Missing the required parameter 'richiesta' when calling v2richiesteShow(Async)");
+    private okhttp3.Call v2vistiShowValidateBeforeCall(@javax.annotation.Nonnull String visto, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'visto' is set
+        if (visto == null) {
+            throw new ApiException("Missing the required parameter 'visto' when calling v2vistiShow(Async)");
         }
 
-        return v2richiesteShowCall(richiesta, _callback);
+        return v2vistiShowCall(visto, _callback);
 
     }
 
     /**
      * Display the specified resource
      * 
-     * @param richiesta The richiesta r1 codric (required)
+     * @param visto The visto cod (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -423,15 +419,15 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public Object v2richiesteShow(@javax.annotation.Nonnull String richiesta) throws ApiException {
-        ApiResponse<Object> localVarResp = v2richiesteShowWithHttpInfo(richiesta);
+    public Object v2vistiShow(@javax.annotation.Nonnull String visto) throws ApiException {
+        ApiResponse<Object> localVarResp = v2vistiShowWithHttpInfo(visto);
         return localVarResp.getData();
     }
 
     /**
      * Display the specified resource
      * 
-     * @param richiesta The richiesta r1 codric (required)
+     * @param visto The visto cod (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -444,8 +440,8 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> v2richiesteShowWithHttpInfo(@javax.annotation.Nonnull String richiesta) throws ApiException {
-        okhttp3.Call localVarCall = v2richiesteShowValidateBeforeCall(richiesta, null);
+    public ApiResponse<Object> v2vistiShowWithHttpInfo(@javax.annotation.Nonnull String visto) throws ApiException {
+        okhttp3.Call localVarCall = v2vistiShowValidateBeforeCall(visto, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -453,7 +449,7 @@ public class RichiestaApi {
     /**
      * Display the specified resource (asynchronously)
      * 
-     * @param richiesta The richiesta r1 codric (required)
+     * @param visto The visto cod (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -467,16 +463,16 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteShowAsync(@javax.annotation.Nonnull String richiesta, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call v2vistiShowAsync(@javax.annotation.Nonnull String visto, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v2richiesteShowValidateBeforeCall(richiesta, _callback);
+        okhttp3.Call localVarCall = v2vistiShowValidateBeforeCall(visto, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for v2richiesteStore
-     * @param v2richiesteStoreRequest  (required)
+     * Build call for v2vistiStore
+     * @param v2vistiStoreRequest  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -490,7 +486,7 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteStoreCall(@javax.annotation.Nonnull V2richiesteStoreRequest v2richiesteStoreRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v2vistiStoreCall(@javax.annotation.Nonnull V2vistiStoreRequest v2vistiStoreRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -504,10 +500,10 @@ public class RichiestaApi {
             basePath = null;
         }
 
-        Object localVarPostBody = v2richiesteStoreRequest;
+        Object localVarPostBody = v2vistiStoreRequest;
 
         // create path and map variables
-        String localVarPath = "/richieste";
+        String localVarPath = "/visti";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -536,20 +532,20 @@ public class RichiestaApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v2richiesteStoreValidateBeforeCall(@javax.annotation.Nonnull V2richiesteStoreRequest v2richiesteStoreRequest, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'v2richiesteStoreRequest' is set
-        if (v2richiesteStoreRequest == null) {
-            throw new ApiException("Missing the required parameter 'v2richiesteStoreRequest' when calling v2richiesteStore(Async)");
+    private okhttp3.Call v2vistiStoreValidateBeforeCall(@javax.annotation.Nonnull V2vistiStoreRequest v2vistiStoreRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'v2vistiStoreRequest' is set
+        if (v2vistiStoreRequest == null) {
+            throw new ApiException("Missing the required parameter 'v2vistiStoreRequest' when calling v2vistiStore(Async)");
         }
 
-        return v2richiesteStoreCall(v2richiesteStoreRequest, _callback);
+        return v2vistiStoreCall(v2vistiStoreRequest, _callback);
 
     }
 
     /**
      * Store a newly created resource in storage
      * 
-     * @param v2richiesteStoreRequest  (required)
+     * @param v2vistiStoreRequest  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -562,15 +558,15 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public Object v2richiesteStore(@javax.annotation.Nonnull V2richiesteStoreRequest v2richiesteStoreRequest) throws ApiException {
-        ApiResponse<Object> localVarResp = v2richiesteStoreWithHttpInfo(v2richiesteStoreRequest);
+    public Object v2vistiStore(@javax.annotation.Nonnull V2vistiStoreRequest v2vistiStoreRequest) throws ApiException {
+        ApiResponse<Object> localVarResp = v2vistiStoreWithHttpInfo(v2vistiStoreRequest);
         return localVarResp.getData();
     }
 
     /**
      * Store a newly created resource in storage
      * 
-     * @param v2richiesteStoreRequest  (required)
+     * @param v2vistiStoreRequest  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -583,8 +579,8 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> v2richiesteStoreWithHttpInfo(@javax.annotation.Nonnull V2richiesteStoreRequest v2richiesteStoreRequest) throws ApiException {
-        okhttp3.Call localVarCall = v2richiesteStoreValidateBeforeCall(v2richiesteStoreRequest, null);
+    public ApiResponse<Object> v2vistiStoreWithHttpInfo(@javax.annotation.Nonnull V2vistiStoreRequest v2vistiStoreRequest) throws ApiException {
+        okhttp3.Call localVarCall = v2vistiStoreValidateBeforeCall(v2vistiStoreRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -592,7 +588,7 @@ public class RichiestaApi {
     /**
      * Store a newly created resource in storage (asynchronously)
      * 
-     * @param v2richiesteStoreRequest  (required)
+     * @param v2vistiStoreRequest  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -606,17 +602,17 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteStoreAsync(@javax.annotation.Nonnull V2richiesteStoreRequest v2richiesteStoreRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call v2vistiStoreAsync(@javax.annotation.Nonnull V2vistiStoreRequest v2vistiStoreRequest, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v2richiesteStoreValidateBeforeCall(v2richiesteStoreRequest, _callback);
+        okhttp3.Call localVarCall = v2vistiStoreValidateBeforeCall(v2vistiStoreRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for v2richiesteUpdate
-     * @param richiesta The richiesta r1 codric (required)
-     * @param v2richiesteUpdateRequest  (required)
+     * Build call for v2vistiUpdate
+     * @param visto The visto cod (required)
+     * @param v2vistiUpdateRequest  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -631,7 +627,7 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteUpdateCall(@javax.annotation.Nonnull String richiesta, @javax.annotation.Nonnull V2richiesteUpdateRequest v2richiesteUpdateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call v2vistiUpdateCall(@javax.annotation.Nonnull String visto, @javax.annotation.Nonnull V2vistiUpdateRequest v2vistiUpdateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -645,11 +641,11 @@ public class RichiestaApi {
             basePath = null;
         }
 
-        Object localVarPostBody = v2richiesteUpdateRequest;
+        Object localVarPostBody = v2vistiUpdateRequest;
 
         // create path and map variables
-        String localVarPath = "/richieste/{richiesta}"
-            .replace("{" + "richiesta" + "}", localVarApiClient.escapeString(richiesta.toString()));
+        String localVarPath = "/visti/{visto}"
+            .replace("{" + "visto" + "}", localVarApiClient.escapeString(visto.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -678,26 +674,26 @@ public class RichiestaApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v2richiesteUpdateValidateBeforeCall(@javax.annotation.Nonnull String richiesta, @javax.annotation.Nonnull V2richiesteUpdateRequest v2richiesteUpdateRequest, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'richiesta' is set
-        if (richiesta == null) {
-            throw new ApiException("Missing the required parameter 'richiesta' when calling v2richiesteUpdate(Async)");
+    private okhttp3.Call v2vistiUpdateValidateBeforeCall(@javax.annotation.Nonnull String visto, @javax.annotation.Nonnull V2vistiUpdateRequest v2vistiUpdateRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'visto' is set
+        if (visto == null) {
+            throw new ApiException("Missing the required parameter 'visto' when calling v2vistiUpdate(Async)");
         }
 
-        // verify the required parameter 'v2richiesteUpdateRequest' is set
-        if (v2richiesteUpdateRequest == null) {
-            throw new ApiException("Missing the required parameter 'v2richiesteUpdateRequest' when calling v2richiesteUpdate(Async)");
+        // verify the required parameter 'v2vistiUpdateRequest' is set
+        if (v2vistiUpdateRequest == null) {
+            throw new ApiException("Missing the required parameter 'v2vistiUpdateRequest' when calling v2vistiUpdate(Async)");
         }
 
-        return v2richiesteUpdateCall(richiesta, v2richiesteUpdateRequest, _callback);
+        return v2vistiUpdateCall(visto, v2vistiUpdateRequest, _callback);
 
     }
 
     /**
      * Update the specified resource in storage
      * 
-     * @param richiesta The richiesta r1 codric (required)
-     * @param v2richiesteUpdateRequest  (required)
+     * @param visto The visto cod (required)
+     * @param v2vistiUpdateRequest  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -711,16 +707,16 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public Object v2richiesteUpdate(@javax.annotation.Nonnull String richiesta, @javax.annotation.Nonnull V2richiesteUpdateRequest v2richiesteUpdateRequest) throws ApiException {
-        ApiResponse<Object> localVarResp = v2richiesteUpdateWithHttpInfo(richiesta, v2richiesteUpdateRequest);
+    public Object v2vistiUpdate(@javax.annotation.Nonnull String visto, @javax.annotation.Nonnull V2vistiUpdateRequest v2vistiUpdateRequest) throws ApiException {
+        ApiResponse<Object> localVarResp = v2vistiUpdateWithHttpInfo(visto, v2vistiUpdateRequest);
         return localVarResp.getData();
     }
 
     /**
      * Update the specified resource in storage
      * 
-     * @param richiesta The richiesta r1 codric (required)
-     * @param v2richiesteUpdateRequest  (required)
+     * @param visto The visto cod (required)
+     * @param v2vistiUpdateRequest  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -734,8 +730,8 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> v2richiesteUpdateWithHttpInfo(@javax.annotation.Nonnull String richiesta, @javax.annotation.Nonnull V2richiesteUpdateRequest v2richiesteUpdateRequest) throws ApiException {
-        okhttp3.Call localVarCall = v2richiesteUpdateValidateBeforeCall(richiesta, v2richiesteUpdateRequest, null);
+    public ApiResponse<Object> v2vistiUpdateWithHttpInfo(@javax.annotation.Nonnull String visto, @javax.annotation.Nonnull V2vistiUpdateRequest v2vistiUpdateRequest) throws ApiException {
+        okhttp3.Call localVarCall = v2vistiUpdateValidateBeforeCall(visto, v2vistiUpdateRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -743,8 +739,8 @@ public class RichiestaApi {
     /**
      * Update the specified resource in storage (asynchronously)
      * 
-     * @param richiesta The richiesta r1 codric (required)
-     * @param v2richiesteUpdateRequest  (required)
+     * @param visto The visto cod (required)
+     * @param v2vistiUpdateRequest  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -759,9 +755,9 @@ public class RichiestaApi {
         <tr><td> 401 </td><td> Unauthenticated </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v2richiesteUpdateAsync(@javax.annotation.Nonnull String richiesta, @javax.annotation.Nonnull V2richiesteUpdateRequest v2richiesteUpdateRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call v2vistiUpdateAsync(@javax.annotation.Nonnull String visto, @javax.annotation.Nonnull V2vistiUpdateRequest v2vistiUpdateRequest, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v2richiesteUpdateValidateBeforeCall(richiesta, v2richiesteUpdateRequest, _callback);
+        okhttp3.Call localVarCall = v2vistiUpdateValidateBeforeCall(visto, v2vistiUpdateRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

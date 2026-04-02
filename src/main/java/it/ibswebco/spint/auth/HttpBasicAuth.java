@@ -11,10 +11,10 @@
  */
 
 
-package org.openapitools.client.auth;
+package it.ibswebco.spint.auth;
 
-import org.openapitools.client.Pair;
-import org.openapitools.client.ApiException;
+import it.ibswebco.spint.Pair;
+import it.ibswebco.spint.ApiException;
 
 import okhttp3.Credentials;
 

@@ -16,12 +16,12 @@ All URIs are relative to *https://api.sprintco.it/v2*
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {

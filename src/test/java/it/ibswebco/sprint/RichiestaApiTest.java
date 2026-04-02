@@ -11,13 +11,13 @@
  */
 
 
-package org.openapitools.client.api;
+package it.ibswebco.sprint;
 
-import org.openapitools.client.ApiException;
+import it.ibswebco.spint.ApiException;
 import org.openapitools.client.model.InlineObject;
 import org.openapitools.client.model.InlineObject1;
-import org.openapitools.client.model.V2vistiStoreRequest;
-import org.openapitools.client.model.V2vistiUpdateRequest;
+import org.openapitools.client.model.V2richiesteStoreRequest;
+import org.openapitools.client.model.V2richiesteUpdateRequest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for VistoApi
+ * API tests for RichiestaApi
  */
 @Disabled
-public class VistoApiTest {
+public class RichiestaApiTest {
 
-    private final VistoApi api = new VistoApi();
+    private final RichiestaApi api = new RichiestaApi();
 
     /**
      * Remove the specified resource from storage
@@ -40,9 +40,9 @@ public class VistoApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2vistiDestroyTest() throws ApiException {
-        String visto = null;
-        api.v2vistiDestroy(visto);
+    public void v2richiesteDestroyTest() throws ApiException {
+        String richiesta = null;
+        Object response = api.v2richiesteDestroy(richiesta);
         // TODO: test validations
     }
 
@@ -52,8 +52,8 @@ public class VistoApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2vistiIndexTest() throws ApiException {
-        Object response = api.v2vistiIndex();
+    public void v2richiesteIndexTest() throws ApiException {
+        Object response = api.v2richiesteIndex();
         // TODO: test validations
     }
 
@@ -63,9 +63,9 @@ public class VistoApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2vistiShowTest() throws ApiException {
-        String visto = null;
-        Object response = api.v2vistiShow(visto);
+    public void v2richiesteShowTest() throws ApiException {
+        String richiesta = null;
+        Object response = api.v2richiesteShow(richiesta);
         // TODO: test validations
     }
 
@@ -75,9 +75,9 @@ public class VistoApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2vistiStoreTest() throws ApiException {
-        V2vistiStoreRequest v2vistiStoreRequest = null;
-        Object response = api.v2vistiStore(v2vistiStoreRequest);
+    public void v2richiesteStoreTest() throws ApiException {
+        V2richiesteStoreRequest v2richiesteStoreRequest = null;
+        Object response = api.v2richiesteStore(v2richiesteStoreRequest);
         // TODO: test validations
     }
 
@@ -87,10 +87,10 @@ public class VistoApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2vistiUpdateTest() throws ApiException {
-        String visto = null;
-        V2vistiUpdateRequest v2vistiUpdateRequest = null;
-        Object response = api.v2vistiUpdate(visto, v2vistiUpdateRequest);
+    public void v2richiesteUpdateTest() throws ApiException {
+        String richiesta = null;
+        V2richiesteUpdateRequest v2richiesteUpdateRequest = null;
+        Object response = api.v2richiesteUpdate(richiesta, v2richiesteUpdateRequest);
         // TODO: test validations
     }
 

@@ -11,7 +11,7 @@
  */
 
 
-package org.openapitools.client;
+package it.ibswebco.spint;
 
 import okhttp3.*;
 import okio.Buffer;

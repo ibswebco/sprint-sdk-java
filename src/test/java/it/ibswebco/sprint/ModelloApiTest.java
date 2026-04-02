@@ -11,13 +11,13 @@
  */
 
 
-package org.openapitools.client.api;
+package it.ibswebco.sprint;
 
-import org.openapitools.client.ApiException;
+import it.ibswebco.spint.ApiException;
 import org.openapitools.client.model.InlineObject;
 import org.openapitools.client.model.InlineObject1;
-import org.openapitools.client.model.V2richiesteStoreRequest;
-import org.openapitools.client.model.V2richiesteUpdateRequest;
+import org.openapitools.client.model.V2modelliStoreRequest;
+import org.openapitools.client.model.V2modelliUpdateRequest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for RichiestaApi
+ * API tests for ModelloApi
  */
 @Disabled
-public class RichiestaApiTest {
+public class ModelloApiTest {
 
-    private final RichiestaApi api = new RichiestaApi();
+    private final ModelloApi api = new ModelloApi();
 
     /**
      * Remove the specified resource from storage
@@ -40,9 +40,9 @@ public class RichiestaApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2richiesteDestroyTest() throws ApiException {
-        String richiesta = null;
-        Object response = api.v2richiesteDestroy(richiesta);
+    public void v2modelliDestroyTest() throws ApiException {
+        Integer modello = null;
+        api.v2modelliDestroy(modello);
         // TODO: test validations
     }
 
@@ -52,8 +52,8 @@ public class RichiestaApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2richiesteIndexTest() throws ApiException {
-        Object response = api.v2richiesteIndex();
+    public void v2modelliIndexTest() throws ApiException {
+        Object response = api.v2modelliIndex();
         // TODO: test validations
     }
 
@@ -63,9 +63,9 @@ public class RichiestaApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2richiesteShowTest() throws ApiException {
-        String richiesta = null;
-        Object response = api.v2richiesteShow(richiesta);
+    public void v2modelliShowTest() throws ApiException {
+        Integer modello = null;
+        Object response = api.v2modelliShow(modello);
         // TODO: test validations
     }
 
@@ -75,9 +75,9 @@ public class RichiestaApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2richiesteStoreTest() throws ApiException {
-        V2richiesteStoreRequest v2richiesteStoreRequest = null;
-        Object response = api.v2richiesteStore(v2richiesteStoreRequest);
+    public void v2modelliStoreTest() throws ApiException {
+        V2modelliStoreRequest v2modelliStoreRequest = null;
+        Object response = api.v2modelliStore(v2modelliStoreRequest);
         // TODO: test validations
     }
 
@@ -87,10 +87,10 @@ public class RichiestaApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void v2richiesteUpdateTest() throws ApiException {
-        String richiesta = null;
-        V2richiesteUpdateRequest v2richiesteUpdateRequest = null;
-        Object response = api.v2richiesteUpdate(richiesta, v2richiesteUpdateRequest);
+    public void v2modelliUpdateTest() throws ApiException {
+        Integer modello = null;
+        V2modelliUpdateRequest v2modelliUpdateRequest = null;
+        Object response = api.v2modelliUpdate(modello, v2modelliUpdateRequest);
         // TODO: test validations
     }
 

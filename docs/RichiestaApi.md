@@ -20,12 +20,12 @@ Remove the specified resource from storage
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RichiestaApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.RichiestaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -88,12 +88,12 @@ Display a listing of the resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RichiestaApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.RichiestaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -150,12 +150,12 @@ Display the specified resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RichiestaApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.RichiestaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -218,12 +218,12 @@ Store a newly created resource in storage
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RichiestaApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.RichiestaApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -286,12 +286,12 @@ Update the specified resource in storage
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.RichiestaApi;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
+import it.ibswebco.spint.models.*;
+import it.ibswebco.sprint.RichiestaApi;
 
 public class Example {
   public static void main(String[] args) {

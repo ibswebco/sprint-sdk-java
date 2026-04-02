@@ -11,7 +11,7 @@
  */
 
 
-package org.openapitools.client;
+package it.ibswebco.spint;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

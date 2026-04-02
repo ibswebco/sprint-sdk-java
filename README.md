@@ -1,8 +1,8 @@
-# openapi-java-client
+# sprint-sdk-java
 
 API Sprint - Documentazione
 - API version: 2.0.0
-  - Build date: 2026-03-31T09:52:59.357933300+02:00[Europe/Rome]
+  - Build date: 2026-04-02T09:21:23.762486700+02:00[Europe/Rome]
   - Generator version: 7.21.0
 
 IBSWebCO API Sprint per l'automazione delle richieste di Certificati di origine e Visti alle Camera di commercio italiane (servizio Commercio Estero)
@@ -39,8 +39,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
+  <groupId>it.ibswebco</groupId>
+  <artifactId>sprint-sdk-java</artifactId>
   <version>2.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -52,12 +52,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'sprint-sdk-java' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'sprint-sdk-java' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.openapitools:openapi-java-client:2.0.0"
+     implementation "it.ibswebco:sprint-sdk-java:2.0.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapi-java-client-2.0.0.jar`
+* `target/sprint-sdk-java-2.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -81,12 +81,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
+import it.ibswebco.spint.ApiClient;
+import it.ibswebco.spint.ApiException;
+import it.ibswebco.spint.Configuration;
+import it.ibswebco.spint.auth.*;
 import org.openapitools.client.model.*;
-import org.openapitools.client.api.DefaultApi;
+import it.ibswebco.sprint.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
